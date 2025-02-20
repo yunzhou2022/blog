@@ -1,0 +1,25 @@
+@startuml
+start
+:createStore;
+:劫持dispatch实现;
+note right
+  替换原始dispatch方法
+  支持函数式action
+end note
+
+:统一处理函数式更新;
+if (payload是函数?) then (是)
+  :执行函数获取新状态;
+else (否)
+  :直接使用payload;
+endif
+
+:自动合并新旧state;
+note left
+  使用Object.assign
+  或展开运算符
+end note
+
+:通过useSyncExternalStore绑定;
+stop
+@enduml
