@@ -5,7 +5,7 @@ import { remark } from 'remark';
 import remarkHtml from 'remark-html';
 import remarkGfm from 'remark-gfm';
 
-const postsDirectory = path.join(process.cwd(), 'docs');
+const postsDirectory = path.join(process.cwd(), 'blogs');
 
 export interface Post {
   slug: string; // 格式：一级分类/二级分类/文件名（不含扩展名）
@@ -134,7 +134,7 @@ export function getAllPosts(): Post[] {
     return posts;
   }
   
-  // 遍历 docs 目录下的一级分类
+  // 遍历 blogs 目录下的一级分类
   const categories = fs.readdirSync(postsDirectory, { withFileTypes: true });
   
   categories.forEach((categoryDir) => {

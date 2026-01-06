@@ -17,8 +17,8 @@ export async function GET(
     const filename = imagePath.slice(-1)[0];
     const restPath = imagePath.slice(0, -1);
     
-    // 尝试新路径：docs/category/subCategory/filename
-    let filePath = path.join(process.cwd(), 'docs', ...restPath, filename);
+    // 尝试新路径：blogs/category/subCategory/filename
+    let filePath = path.join(process.cwd(), 'blogs', ...restPath, filename);
     
     // 如果新路径不存在，尝试旧路径：year/filename
     if (!fs.existsSync(filePath) && restPath.length === 1) {
