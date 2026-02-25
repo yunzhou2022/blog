@@ -133,6 +133,12 @@ body {
   color: #e3e2e0;
 }
 
+@media (prefers-color-scheme: dark) {
+  .notion-content {
+    color: #e3e2e0;
+  }
+}
+
 .notion-content h1[id],
 .notion-content h2[id],
 .notion-content h3[id],
@@ -199,6 +205,13 @@ body {
   color: #fda4af;
 }
 
+@media (prefers-color-scheme: dark) {
+  .notion-content code {
+    background-color: #27272a;
+    color: #fda4af;
+  }
+}
+
 .notion-content pre {
   background-color: #f8f9fa;
   color: #24292e;
@@ -216,6 +229,15 @@ body {
   color: #d4d4d4;
   border-color: #3f3f46;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  .notion-content pre {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    border-color: #3f3f46;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .notion-content pre code {
@@ -248,6 +270,13 @@ body {
   color: #9b9a97;
 }
 
+@media (prefers-color-scheme: dark) {
+  .notion-content blockquote {
+    border-left-color: rgba(255, 255, 255, 0.13);
+    color: #9b9a97;
+  }
+}
+
 .notion-content a {
   color: #0b70e1;
   text-decoration: none;
@@ -270,6 +299,17 @@ body {
   border-bottom-color: rgba(255, 255, 255, 0.4);
 }
 
+@media (prefers-color-scheme: dark) {
+  .notion-content a {
+    color: #3b82f6;
+    border-bottom-color: rgba(255, 255, 255, 0.13);
+  }
+  .notion-content a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
 .notion-content hr {
   border: none;
   border-top: 1px solid rgba(55, 53, 47, 0.16);
@@ -279,6 +319,12 @@ body {
 
 .dark .notion-content hr {
   border-top-color: rgba(255, 255, 255, 0.13);
+}
+
+@media (prefers-color-scheme: dark) {
+  .notion-content hr {
+    border-top-color: rgba(255, 255, 255, 0.13);
+  }
 }
 
 .notion-content table {
@@ -307,6 +353,16 @@ body {
 
 .dark .notion-content table th {
   background-color: rgba(255, 255, 255, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .notion-content table th,
+  .notion-content table td {
+    border-color: rgba(255, 255, 255, 0.13);
+  }
+  .notion-content table th {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
 }
 
 
