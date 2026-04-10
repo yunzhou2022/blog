@@ -1,0 +1,15 @@
+{
+  "Blog frontmatter (category = 上两级目录)": {
+    "scope": "markdown",
+    "prefix": ["blogfm", "blogfmqt"],
+    "body": [
+      "---",
+      "category: ${TM_DIRECTORY#^.*/([^/]+)/[^/]+$#$1#}",
+      "date: $CURRENT_YEAR_SHORT.$CURRENT_MONTH.$CURRENT_DATE",
+      "---",
+      "",
+      ""
+    ],
+    "description": "YAML 头；category = 当前文件所在目录的上一级文件夹名（如 …/后端/日常迭代 → 后端）。请先保存到目标路径再插入。"
+  }
+}
